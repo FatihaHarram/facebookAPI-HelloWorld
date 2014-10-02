@@ -49,8 +49,8 @@ $permissions = array(
   'user_location',
   'user_birthday',
   'user_friends',
- // 'user_likes',
- // 'user_actions.music'
+  'user_likes',
+  'user_actions.music'
 );
  
 try {
