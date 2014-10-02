@@ -10,6 +10,8 @@ require_once( 'Facebook/FacebookSDKException.php' );
 require_once( 'Facebook/FacebookRequestException.php' );
 require_once( 'Facebook/FacebookAuthorizationException.php' );
 require_once( 'Facebook/GraphObject.php' );
+require_once( 'Facebook/Entities/AccessToken.php');
+require_once( 'Facebook/Entities/SignedRequest.php');
  
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
@@ -19,6 +21,8 @@ use Facebook\FacebookSDKException;
 use Facebook\FacebookRequestException;
 use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
+use Facebook\Entities\AccessToken;
+use Facebook\Entities\SignedRequest;
  
 // init app with app id (APPID) and secret (SECRET)
 FacebookSession::setDefaultApplication('296586090536642','850aca68f14e4f39069f13beb0018760');
