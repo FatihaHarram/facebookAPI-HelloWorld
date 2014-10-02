@@ -2,6 +2,13 @@
 
 session_start();
  
+require_once( 'Facebook/HttpClients/FacebookHttpable.php' );
+require_once( 'Facebook/HttpClients/FacebookCurl.php' );
+require_once( 'Facebook/HttpClients/FacebookCurlHttpClient.php' );
+require_once( 'Facebook/HttpClients/FacebookGuzzleHttpClient.php' );
+require_once( 'Facebook/HttpClients/FacebookStream.php' );
+require_once( 'Facebook/HttpClients/FacebookStreamHttpClient.php' );
+
 require_once( 'Facebook/FacebookSession.php' );
 require_once( 'Facebook/FacebookRedirectLoginHelper.php' );
 require_once( 'Facebook/FacebookRequest.php' );
@@ -23,6 +30,12 @@ use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
 use Facebook\Entities\AccessToken;
 use Facebook\Entities\SignedRequest;
+use Facebook\HttpClients\FacebookHttpable;
+use Facebook\HttpClients\FacebookCurl;
+use Facebook\HttpClients\FacebookCurlHttpClient;
+use Facebook\HttpClients\FacebookGuzzleHttpClient;
+use Facebook\HttpClients\FacebookStream;
+use Facebook\HttpClients\FacebookStreamHttpClient;
  
 // init app with app id (APPID) and secret (SECRET)
 FacebookSession::setDefaultApplication('296586090536642','850aca68f14e4f39069f13beb0018760');
