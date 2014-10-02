@@ -49,8 +49,8 @@ $permissions = array(
   'user_location',
   'user_birthday',
   'user_friends',
-  'user_likes',
-  'user_actions.music'
+ // 'user_likes',
+ // 'user_actions.music'
 );
  
 try {
@@ -65,7 +65,7 @@ try {
 // see if we have a session
 if ( isset( $session ) ) {
   // graph api request for user data
-  $request = new FacebookRequest( $session, 'GET', '/me/music' );
+  $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
   // get response
   $graphObject = $response->getGraphObject();
