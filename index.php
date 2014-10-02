@@ -42,6 +42,13 @@ FacebookSession::setDefaultApplication('296586090536642','850aca68f14e4f39069f13
  
 // login helper with redirect_uri
 $helper = new FacebookRedirectLoginHelper( 'http://immense-depths-9230.herokuapp.com/' );
+
+// Requested permissions for the app - optional
+$permissions = array(
+  'email',
+  'user_location',
+  'user_birthday'
+);
  
 try {
   $session = $helper->getSessionFromRedirect();
@@ -64,5 +71,5 @@ if ( isset( $session ) ) {
   echo  print_r( $graphObject, 1 );
 } else {
   // show login url
-  echo '<a href="' . $helper->getLoginUrl() . '">Login</a>';
+  echo '<a href="' . $helper->getLoginUrl($permissions) . '">Login</a>';
 }
