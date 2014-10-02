@@ -48,7 +48,8 @@ $permissions = array(
   'email',
   'user_location',
   'user_birthday',
-  'user_friends'
+  'user_friends',
+  'user_actions.music'
 );
  
 try {
