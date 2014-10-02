@@ -45,7 +45,7 @@ $helper = new FacebookRedirectLoginHelper( 'http://immense-depths-9230.herokuapp
  
 try {
   $session = $helper->getSessionFromRedirect();
-  echo "<h1>Hello World</h1>"
+  echo "<h1>Hello World</h1>";
 } catch( FacebookRequestException $ex ) {
   // When Facebook returns an error
 } catch( Exception $ex ) {
