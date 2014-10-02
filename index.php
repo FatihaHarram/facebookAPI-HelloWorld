@@ -24,7 +24,7 @@ use Facebook\GraphObject;
 FacebookSession::setDefaultApplication('296586090536642','850aca68f14e4f39069f13beb0018760');
  
 // login helper with redirect_uri
-$helper = new FacebookRedirectLoginHelper( '' );
+$helper = new FacebookRedirectLoginHelper( 'http://immense-depths-9230.herokuapp.com/' );
  
 try {
   $session = $helper->getSessionFromRedirect();
