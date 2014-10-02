@@ -47,7 +47,8 @@ $helper = new FacebookRedirectLoginHelper( 'http://immense-depths-9230.herokuapp
 $permissions = array(
   'email',
   'user_location',
-  'user_birthday'
+  'user_birthday',
+  'user_friends'
 );
  
 try {
