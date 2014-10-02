@@ -72,6 +72,13 @@ if ( isset( $session ) ) {
    
   // print data
   echo  print_r( $graphObject, 1 );
+
+  $request = new FacebookRequest( $session, 'GET', '/me/friends');
+  $response = $request->execute();
+  $graphObject = $response->getGraphObject();
+
+  echo "<h3> Friends using this app : </h3>";
+  echo  print_r( $graphObject, 1 );
 } else {
   // show login url
   echo '<a href="' . $helper->getLoginUrl($permissions) . '">Login</a>';
