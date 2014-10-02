@@ -28,6 +28,7 @@ $helper = new FacebookRedirectLoginHelper( 'http://immense-depths-9230.herokuapp
  
 try {
   $session = $helper->getSessionFromRedirect();
+  echo "<h1> Hello </h1>";
 } catch( FacebookRequestException $ex ) {
   // When Facebook returns an error
 } catch( Exception $ex ) {
@@ -36,7 +37,6 @@ try {
  
 // see if we have a session
 if ( isset( $session ) ) {
-  echo "<h1> Hello </h1>";
   // graph api request for user data
   $request = new FacebookRequest( $session, 'GET', '/me' );
   $response = $request->execute();
